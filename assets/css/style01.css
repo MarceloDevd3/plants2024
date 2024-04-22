@@ -12,10 +12,10 @@
     --cyan: #1A2E35;
 }
 
-body {
-    font-size: 1em;
-    background-color: var(--light--gray);
-    overflow-x: hidden;
+
+
+main {
+    overflow: hidden;  
 }
 
 ul {
@@ -91,7 +91,17 @@ ul li a {
     }
 }
 
+body {
+    font-size: 1em;
+    background-color: var(--light--gray);
+    overflow-x: hidden;
+    animation: show ease-in-out 0.7s;
+}
 
+
+main {
+    overflow-x: hidden;
+}
 
 /*navbar and nav*/
 
@@ -322,7 +332,7 @@ main {
 .next,
 .prev {
     position: absolute;
-    top: 100%;
+    top: 70%;
 }
 
 .next {
@@ -333,6 +343,14 @@ main {
     right: 1%;
 }
 
+@media (min-width:400px) {
+    .next,
+.prev {
+    position: absolute;
+    top: 67%;
+}
+
+}
 
 @media (min-width: 500px) {
     .card {

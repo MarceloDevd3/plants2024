@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style01.css">
+  <link rel="stylesheet" href="assets/css/style01.css">
   <script src="https://kit.fontawesome.com/d2e15d65bb.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,41 +92,8 @@
       </div>
     </section>
   </main>
-  <script>
-
-
-
-
-    let prev = document.querySelector('.prev');
-    let next = document.querySelector('.next');
-    let slider = document.querySelector('.card-container');
-    let openIcon = document.querySelector('.open');
-    let closeIcon = document.querySelector('.close');
-    let navbar = document.querySelector('.navbar');
-
-
-
-    openIcon.addEventListener('click', function(){
-        navbar.classList.add('active')
-    })
-
-    closeIcon.addEventListener('click', function(){
-        navbar.classList.remove('active')
-    })
-     
-     next.addEventListener('click', function() {
-      let slides = document.querySelectorAll('.card')
-      slider.appendChild(slides[0])
-     })
-
-     prev.addEventListener('click', function() {
-      let slides = document.querySelectorAll('.card')
-      slider.prepend(slides[slides.length - 1])
-     })
-
-
-
-  </script>
+  <script src="assets/script/slider.js"></script>
+  <script src="assets/script/menu.js"></script>
 </body>
 
 </html>
