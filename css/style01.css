@@ -121,6 +121,7 @@ ul li a {
     -webkit-backdrop-filter: blur(4.5px);
     border: 1px solid rgba(207, 193, 193, 0.26);
     z-index: 4;
+    overflow: hidden;
 }
 
 
@@ -259,7 +260,7 @@ main {
     animation: show ease 0.1s;
 }
 
-.card:nth-of-type(1) img {
+.card:nth-of-type(1) .planta {
     top: -40px;
     left: 5%;
     transform: scale(1.1);
@@ -321,7 +322,7 @@ main {
 .next,
 .prev {
     position: absolute;
-    top: 95%;
+    top: 100%;
 }
 
 .next {
@@ -337,6 +338,12 @@ main {
     .card {
         left: -100px;
     }
+
+    .next,
+.prev {
+    position: absolute;
+    top: 95%;
+}
 
 }
 
@@ -403,10 +410,18 @@ main {
     }
 
     .card {
-        min-width:300px;
+        min-width: 300px;
         height: 300px;
         border-radius: 10px;
         margin: 0 1em;
+    }
+
+    .planta {
+        min-width: 200px;
+        transform: scale(1.1);
+        height: 300px;
+        position: absolute;
+        top: 10% !important;
     }
 
     .card:nth-of-type(1) {
@@ -416,31 +431,24 @@ main {
         margin-left: 150px;
     }
 
-    .card > .planta {
-        width: 250px;
-        position: relative;
-        top: -10% !important;
-        bottom: 5%;
-    }  
-
-    .little-grow-0 {
-        position: relative;
-        width: 300px;
-        height: 300px;
-        transform: scale(1.2);
+    .card:nth-of-type(1) .planta {
+        top: -150px !important;
+        left: 12%;
+        transform: scale(2.5);
     }
 
     .card .card-content h2 {
         width: 150px;
-        margin-top: 75px;
+        margin-top: 100px;
         font-size: 1.2em;
     }
 
-    .card:nth-of-type(1) .planta {
-        top: -150px !important;
-        left: 15%;
+    .card:nth-of-type(1) > .little-grow-0 {
         transform: scale(2.5);
     }
+
+
+
 
     .top-5 {
         position: absolute;
@@ -450,29 +458,29 @@ main {
     }
 
     .next,
-.prev {
-    position: absolute;
-    top: 80%;
-}
+    .prev {
+        position: absolute;
+        top: 80%;
+    }
 
 
-    
-.card-container {
-    left:50px;
-    margin-bottom: 0;
-}
-    
+
+    .card-container {
+        left: 50px;
+        margin-bottom: 0;
+    }
+
 
 
 }
 
 @media (min-width: 1440px) {
- 
+
     .Home-information .home-title {
         font-size: 3em;
         width: 375px;
     }
-    
+
     .top-5 {
         position: absolute;
         top: -5%;
