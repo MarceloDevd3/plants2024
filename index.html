@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style01.css">
+  <script src="https://kit.fontawesome.com/d2e15d65bb.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Plants</title>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="open navbar-icon">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <nav class="navbar">
+      <div class="close navbar-icon">
+        <i class="fa-solid fa-xmark "></i>
+      </div>
+      <ul>
+        <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Plant finder</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Products</a></li>
+        <li class="nav-item"><a href="" class="nav-link">About us</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="" class="nav-link">My plants</a></li>
+        <li class="nav-link-img"><a href=""><i class="fa-regular fa-user"></i></a></li>
+        <li class="nav-link-img"><a href=""><i class="fa fa-cart-shopping"></i></a></li>
+      </ul>
+
+    </nav>
+  </header>
+  <main>
+    <section class="Home">
+      <div class="Home-information">
+        <h1 class="home-title"><span id="small-green">Go Green</span> <br> The world of plants</h1>
+        <p class="home-text">Discover everything you need to know about your plants, treat them with kindness and they
+          will take care of you.</p>
+          
+      </div>
+      <div class="card-container">
+        <p class="top-5">Top 5 of the week
+        </p>
+        <article class="card">
+          <img src="img/foto crassula (1).png" alt="" class="planta">
+          <div class="card-content">
+            <h2>Crassula Ovata</h2>
+            <p class="card-txt">Low-maintenance succulent with delicate pink or white flowers.</p>
+            <a href="#" class="arrow-link"> Know more<img src="img/Trazado 298.png" alt="arrow"></a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/foto hawor.png" alt="" class="planta">
+          <div class="card-content">
+            <h2>Haworthiopsis Attenuata </h2>
+            <p class="card-txt">Delightful little succulent that makes a very attractive small houseplant. </p>
+            <p><span></span></p>
+            <a href="#" class="arrow-link"> Know more<img src="img/Trazado 298.png" alt="arrow"></a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/foto brown.png" alt="" class="planta"> 
+          <div class="card-content">
+            <h2>Browningia Hertlingiana</h2>
+            <p class="card-txt">The juvenile specimens have a beautiful blue frosty covering.</p>
+            <a href="#" class="arrow-link"> Know more <img src="img/Trazado 298.png" alt="arrow"></a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/foto cholor.png" alt="" class="little little-grow-0 planta">
+          <div class="card-content">
+            <h2>Chlorophytum Comosum</h2>
+            <p class="card-txt">Purify the air in your home by absorbing carbon monoxide.</p>
+            <a href="#" class="arrow-link"> Know more <img src="img/Trazado 298.png" alt="arrow"></a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/foto dracena.png" alt="" class="little little-grow-0 planta">
+          <div class="card-content">
+            <h2>Dracaena Trifasciata</h2>
+            <p class="card-txt">One of the most effective houseplants in air purification. </p>
+            <a href="#" class="arrow-link"> Know more <img src="img/Trazado 298.png" alt="arrow"></a>
+          </div>
+        </article>
+      </div>
+      <div class="btn-row">
+          <button type="button" class="prev btn"><img src="img/Trazado 298.png" alt="arrow"></button>
+          <button type="button" class="next btn"><img src="img/Trazado 298.png" alt="arrow"></button>
+      </div>
+    </section>
+  </main>
+  <script>
+
+
+
+
+    let prev = document.querySelector('.prev');
+    let next = document.querySelector('.next');
+    let slider = document.querySelector('.card-container');
+    let openIcon = document.querySelector('.open');
+    let closeIcon = document.querySelector('.close');
+    let navbar = document.querySelector('.navbar');
+
+
+
+    openIcon.addEventListener('click', function(){
+        navbar.classList.add('active')
+    })
+
+    closeIcon.addEventListener('click', function(){
+        navbar.classList.remove('active')
+    })
+     
+     next.addEventListener('click', function() {
+      let slides = document.querySelectorAll('.card')
+      slider.appendChild(slides[0])
+     })
+
+     prev.addEventListener('click', function() {
+      let slides = document.querySelectorAll('.card')
+      slider.prepend(slides[slides.length - 1])
+     })
+
+
+
+  </script>
+</body>
+
+</html>
