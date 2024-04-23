@@ -18,6 +18,8 @@ main {
     overflow: hidden;  
 }
 
+
+
 ul {
     list-style: none;
 }
@@ -450,7 +452,6 @@ main {
 
     .card-container {
         left: 50px;
-        top: 1px;
         margin-bottom: 0;
     }
 
